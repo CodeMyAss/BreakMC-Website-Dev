@@ -1,0 +1,8 @@
+RewriteEngine On 
+RewriteRule ^stats/([^/\.]+)/?$  /stats/index.php?name=$1  [L,NC]
+RewriteRule ^forums/([0-9]+)/t/([0-9]+)/p/([0-9]+)/?$ /forums/thread.php?cat=$1&thread=$2&post=$3  [L,NE]
+RewriteRule ^forums/([0-9]+)/([0-9]+)/?$ /forums/category.php?cat=$1&list=$2  [L]
+RewriteRule ^forums/([0-9]+)/t/([0-9]+)/?$ /forums/thread.php?cat=$1&thread=$2  [L]
+RewriteRule ^forums/([0-9]+)/t/([0-9]+)/([0-9]+)/?$ /forums/thread.php?cat=$1&thread=$2&list=$3 [L]
+RewriteRule ^forums/([0-9]+)/?$ /forums/category.php?cat=$1 [L,NC]
+RewriteRule ^tickets/view/([0-9]+)/?$ /tickets/view/index.php?id=$1 [L,NC]
